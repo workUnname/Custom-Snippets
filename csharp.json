@@ -1,0 +1,19 @@
+{
+	"Generate instance for Global access": {
+		"prefix": "gacs",
+		"body": [
+			"private static $1 _instance;",
+			"public static $2 Instance",
+			"{",
+			"    get",
+			"    {",
+			"        if(_instance == null)",
+			"        {",
+			"            _instance = FindObjectOfType<$3>();",
+			"        }",
+			"        return _instance;",
+			"    }",
+			"}"
+		]
+	}
+}
